@@ -1,0 +1,72 @@
+Replacing cars before they break down
+I am data scientist at a large car-rental company. To make sure our clients don't rent out cars that could break down, we replace the cars that we believe are likely to have technical problems regularly. But we don't want to replace them too often either, to limit cost. Part of our business is optimising that balance.
+
+
+I recently noticed that 3 months ago more of our cars had technical issues than usual. Last August, an unusual proportion of our cars had a problem with the transmission.
+
+
+We had collected data about the cars that where affected by this problem of course, and how these cars had been used in the months before they broke.
+
+
+As you can imagine, our goal was to identify the reasons for this problem and find out how to prevent it from happening again in the next months.
+
+
+
+BUSINESS GOALS
+Understand why cars are having technical problems at a higher rate
+Identify the cars with the highest probability of having the same problem in the future
+
+
+HOW DID WE DO THIS?
+We gathered data to solve those two goals:
+
+measures taken during the various failures (august)
+data about how cars had been used in the weeks before their incidents (june & july)
+information from the maintenance department (june & july)
+
+
+We followed 4 steps to go from that raw data to achieving our business goals, and preventing the next failures:
+Step 1: Explore and prepare the data: We made several transformations to the raw data so we could get valuable information from it. Typically, we transformed that data to create a new dataset aggregated at the car level, with as many relevant features as possible about each vehicle.
+
+
+
+
+Step 2: Create the model: DSS trained a model to predict the feature we wanted to understand (failure or not failure), using the historical data we computed in the previous step.
+
+
+
+
+Step 3: Apply the model to the new data: We deployed the model to have the probability that each car would have the same failure in the next few months
+
+
+
+
+Step 4: Make a decision: Knowing the probability of failure, we identified two groups of cars: the cars we had to check in the 2 next days because they were most likely to have issues, and the cars that we could wait a few extra days to check.
+
+故障する前に車を入れ替える
+私は大手レンタカー会社のデータサイエンティストです。顧客が故障する可能性のある車を貸し出すことがないよう、技術的な問題が発生する可能性が高いと思われる車は定期的に交換しています。しかし、コストを抑えるために、あまり頻繁に交換もしたくありません。そのバランスを最適化することが私たちのビジネスの一部なのです。
+
+
+最近気づいたのですが、3カ月前には技術的な問題を抱えたクルマがいつもより多かったのです。昨年8月には、トランスミッションに問題が発生した車が異例の割合であった。
+
+
+もちろん、私たちはこの問題が発生したクルマと、そのクルマが故障する前の数ヶ月間にどのように使用されたかというデータを収集していた。
+
+
+ご想像のとおり、私たちの目標は、この問題の原因を特定し、今後数ヶ月の間にこの問題が再び起こらないようにする方法を見つけることだった。
+
+
+
+ビジネスの目標
+技術的な問題を抱える車の割合が高い理由を理解する。
+将来、同じ問題が発生する可能性が最も高い車を特定する。
+
+
+どのようにこれを行ったか？
+この2つの目標を解決するためにデータを収集した：
+
+さまざまな不具合発生時の対策（8月）
+不具合が発生する前の数週間における車の使用状況についてのデータ（6月と7月）
+メンテナンス部門からの情報（6月と7月）
+
+DeepL.com（無料版）で翻訳しました。
